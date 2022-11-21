@@ -1,31 +1,32 @@
 import "./App.css";
-import ExpenseItem from "./Components/ExpenseItem";
+import ExpenseItem from "./Components/ExpenseItem/ExpenseItem";
+import Card from "./Components/Card/Card";
 
 function App() {
   const obj = [
     {
       title: "carinsurence",
-      date: new Date(2022, 11, 21).toISOString(),
+      date: new Date(2022, 11, 21),
       cost: 200,
     },
     {
       title: "homerent",
-      date: new Date(2022, 11, 21).toISOString(),
+      date: new Date(2022, 11, 21),
       cost: 500,
     },
     {
       title: "laptop",
-      date: new Date(2022, 11, 21).toISOString(),
+      date: new Date(2022, 11, 21),
       cost: 600,
     },
     {
       title: "newTv",
-      date: new Date(2022, 11, 21).toISOString(),
+      date: new Date(2022, 11, 21),
       cost: 800,
     },
   ];
   return (
-    <div>
+    <Card>
       <h1>Expense tracker</h1>
       {obj.map((data) => {
         return (
@@ -36,7 +37,7 @@ function App() {
           ></ExpenseItem>
         );
       })}
-    </div>
+    </Card>
   );
 }
 
